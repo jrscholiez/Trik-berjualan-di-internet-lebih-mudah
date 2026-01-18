@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahasia Penghasilan Online — E-Book</title>
+<title>Rahasia Berjualan Online — E-Book</title>
 
 <!-- MIDTRANS SNAP JS (otomatis) -->
 <script src="https://app.midtrans.com/snap/snap.js" data-client-key="ISI_CLIENT_KEY"></script>
@@ -12,17 +12,17 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <style>
-body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f7f7;color:#333;line-height:1.5;scroll-behavior:smooth;}
+body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#b3d9ff;color:#333;line-height:1.5;scroll-behavior:smooth;}
 .fade-section {opacity:0;transform:translateY(30px);transition: all 0.8s ease-out;}
 .fade-section.visible {opacity:1;transform:translateY(0);}
-.hero {background:#4f46e5;color:#fff;text-align:center;padding:50px 20px;}
+.hero {background:#87cefa;color:#fff;text-align:center;padding:50px 20px;}
 .hero h1 {margin-bottom:10px;font-size:2em;}
 .hero p {max-width:600px;margin:0 auto 20px;font-size:1em;}
-.badge {display:inline-block;background:#22c55e;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:bold;}
+.badge {display:inline-block;background:#3aa0f3;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:bold;}
 .container {max-width:900px;margin:30px auto;background:#fff;padding:20px;border-radius:12px;}
 .section {margin-bottom:30px;}
-.cta-button {display:inline-block;width:100%;padding:14px 0;background:#22c55e;color:#fff;text-decoration:none;border-radius:10px;font-weight:bold;text-align:center;transition:all 0.3s ease;margin-bottom:10px;}
-.cta-button:hover {background:#16a34a;transform:scale(1.05);}
+.cta-button {display:inline-block;width:100%;padding:14px 0;background:#3aa0f3;color:#fff;text-decoration:none;border-radius:10px;font-weight:bold;text-align:center;transition:all 0.3s ease;margin-bottom:10px;}
+.cta-button:hover {background:#1e90ff;transform:scale(1.05);}
 .price-box {background:#f1f5f9;padding:20px;border-radius:12px;text-align:center;transition:all 0.5s ease;}
 .price-box:hover {box-shadow:0 8px 20px rgba(0,0,0,0.15);}
 .trust {display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:15px;font-size:0.85em;}
@@ -49,8 +49,8 @@ footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
 
 <div class="hero fade-section">
 <span class="badge">🔥 Sudah dibeli 1.257+ orang</span>
-<h1>Rahasia Berjualan Online Di Marketplace</h1>
-<p>E-book praktis ini cocok untuk pemula yang ingin mulai berjualan dan menghasilkan uang dari internet dengan langkah nyata.</p>
+<h1>Rahasia Berjualan Online Dengan Trik Jitu</h1>
+<p>E-book praktis untuk pemula yang ingin mulai berjualan dan menghasilkan uang dari internet dengan langkah nyata.</p>
 <div id="timer" style="font-size:1.2em;font-weight:bold;margin-bottom:20px;">00:00:00</div>
 <a href="#order" class="cta-button">Ambil Promo Sekarang</a>
 </div>
@@ -139,22 +139,28 @@ Pilih salah satu metode di atas. E-book dikirim otomatis (QRIS) atau manual (Wha
     <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"  background="transparent"  speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
     <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_8wREh5.json"  background="transparent"  speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
   </div>
-  <p>© 2026 • E-Book Muhamad Holis</p>
+  <p>© 2026 • E-Book Cara berjualan online ebih mudah - Muhamad Holis</p>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // Countdown
-  const end = Date.now() + 86400000;
+  // Countdown akurat WIB
+  const now = new Date();
+  const wibOffset = 7 * 60; // +7 jam
+  const localOffset = now.getTimezoneOffset();
+  const endWIB = new Date();
+  endWIB.setHours(23,59,59,999); // promo selesai jam 23:59:59 WIB
+  const endUTC = endWIB.getTime() - (localOffset - wibOffset) * 60000;
+  const timerEl = document.getElementById('timer');
+
   setInterval(() => {
-    const d = end - Date.now();
-    const timer = document.getElementById('timer');
-    if (d <= 0) return timer.innerText = 'Promo Berakhir';
-    const h = String(Math.floor(d / 3600000)).padStart(2,'0');
-    const m = String(Math.floor((d % 3600000) / 60000)).padStart(2,'0');
-    const s = String(Math.floor((d % 60000) / 1000)).padStart(2,'0');
-    timer.innerText = `${h}:${m}:${s}`;
-    if(d < 3600000) timer.style.color = '#f87171';
+    const diff = endUTC - Date.now();
+    if(diff <=0) return timerEl.innerText='Promo Berakhir';
+    const h = String(Math.floor(diff / 3600000)).padStart(2,'0');
+    const m = String(Math.floor((diff % 3600000)/60000)).padStart(2,'0');
+    const s = String(Math.floor((diff % 60000)/1000)).padStart(2,'0');
+    timerEl.innerText=`${h}:${m}:${s}`;
+    if(diff<3600000) timerEl.style.color='#f87171';
   },1000);
 
   // Animasi fade-in
