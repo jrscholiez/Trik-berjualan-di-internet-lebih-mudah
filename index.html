@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahasia Berjualan Online Di Marketplace Dengan Trik E-Book ini</title>
+<title>Rahasia Penghasilan Online — E-Book</title>
 
 <!-- MIDTRANS SNAP JS (otomatis) -->
 <script src="https://app.midtrans.com/snap/snap.js" data-client-key="ISI_CLIENT_KEY"></script>
+
+<!-- Lottie Player CDN untuk animasi footer -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <style>
 body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f7f7;color:#333;line-height:1.5;scroll-behavior:smooth;}
@@ -28,6 +31,8 @@ body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f7f7;color:#
 .testimoni img {border-radius:50%;width:50px;height:50px;flex-shrink:0;}
 .wallets img {height:26px;margin:6px;}
 footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
+.footer-lottie {display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:10px;}
+
 @media (max-width:768px) {
 .hero h1 {font-size:1.6em;}
 .hero p {font-size:0.95em;}
@@ -36,6 +41,7 @@ footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
 .cta-button {font-size:1em;}
 .testimoni {flex-direction:column;align-items:flex-start;}
 .testimoni img {margin-bottom:8px;}
+.footer-lottie lottie-player {width:35px;height:35px;}
 }
 </style>
 </head>
@@ -43,8 +49,8 @@ footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
 
 <div class="hero fade-section">
 <span class="badge">🔥 Sudah dibeli 1.257+ orang</span>
-<h1>Rahasia Berjualan Online Dengan Trik Jitu</h1>
-<p>E-book praktis untuk pemula yang ingin mulai berjualan dan siap menghasilkan uang dari internet dengan langkah nyata.</p>
+<h1>Rahasia Berjualan Online Di Marketplace</h1>
+<p>E-book praktis ini cocok untuk pemula yang ingin mulai berjualan dan menghasilkan uang dari internet dengan langkah nyata.</p>
 <div id="timer" style="font-size:1.2em;font-weight:bold;margin-bottom:20px;">00:00:00</div>
 <a href="#order" class="cta-button">Ambil Promo Sekarang</a>
 </div>
@@ -68,16 +74,16 @@ footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
 <div class="section fade-section">
 <h2>Apa Kata Mereka?</h2>
 <div class="testimoni">
-<img src="assets/avatars/andi.png" alt="Andi">
-<div><strong>Elsya</strong> <span style="background:#22c55e;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Verified Buyer</span><br>“Isinya to the point, langsung paham. Baru 2 minggu sudah dapat hasil.”</div>
+<img src="https://img.icons8.com/color/48/000000/user-male-circle.png" alt="Andi">
+<div><strong>Andi</strong> <span style="background:#22c55e;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Verified Buyer</span><br>“Isinya to the point, langsung paham. Baru 2 minggu sudah dapat hasil.”</div>
 </div>
 <div class="testimoni">
-<img src="assets/avatars/sari.png" alt="Sari">
+<img src="https://img.icons8.com/color/48/000000/user-female-circle.png" alt="Sari">
 <div><strong>Sari</strong> <span style="background:#22c55e;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Verified Buyer</span><br>“Tidak ribet dan cocok untuk pemula seperti saya.”</div>
 </div>
 <div class="testimoni">
-<img src="assets/avatars/rudi.png" alt="Rudi">
-<div><strong>Ratih</strong> <span style="background:#22c55e;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Verified Buyer</span><br>“Worth it banget dengan harganya.”</div>
+<img src="https://img.icons8.com/color/48/000000/user-male-circle.png" alt="Rudi">
+<div><strong>Rudi</strong> <span style="background:#22c55e;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Verified Buyer</span><br>“Worth it banget dengan harganya.”</div>
 </div>
 </div>
 
@@ -86,7 +92,7 @@ footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
 <h2>Profil Penulis</h2>
 <p><strong>Muhamad Holis</strong> – praktisi marketing & sales dengan pengalaman 10+ tahun.</p>
 <p>Materi e-book disusun dari praktik nyata, mudah dipahami, dan langsung bisa diterapkan.</p>
-<p style="margin-top:15px;font-weight:bold;">Salam hangat,<br>Muhamad Holis <span style="background:#4f46e5;color:#fff;font-size:0.75em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Penulis & Praktisi</span></p>
+<p style="margin-top:15px;font-weight:bold;">Salam hangat,<br>Muhamad Holis <span style="background:#4f46e5;color:#fff;font-size:0.75em;padding:2px 6px;border-radius:6px;margin-left:6px;">✔ Penulis</span></p>
 </div>
 
 <!-- Opsi Pembayaran -->
@@ -102,7 +108,7 @@ footer {text-align:center;padding:25px;color:#666;font-size:0.9em;}
 <button id="pay-button-auto" class="cta-button">Bayar Otomatis via QRIS</button>
 
 <!-- Pembayaran Manual -->
-<a href="https://wa.me/6283803888990?text=Saya%20ingin%20membeli%20E-book" 
+<a href="https://wa.me/6283803888990?text=Saya%20ingin%20membeli%20E-book%20Rahasia%20Penghasilan%20Online" 
    class="cta-button" target="_blank">
    Konfirmasi Pembayaran via WhatsApp
 </a>
@@ -112,10 +118,10 @@ Pilih salah satu metode di atas. E-book dikirim otomatis (QRIS) atau manual (Wha
 </p>
 
 <div class="wallets">
-<img src="assets/wallets/gopay.png">
-<img src="assets/wallets/shopeepay.png">
-<img src="assets/wallets/dana.png">
-<img src="assets/wallets/qris.png">
+<img src="https://img.icons8.com/color/48/000000/gopay.png">
+<img src="https://img.icons8.com/color/48/000000/shopee-pay.png">
+<img src="https://img.icons8.com/color/48/000000/dana.png">
+<img src="https://img.icons8.com/color/48/000000/qrcode.png">
 </div>
 </div>
 </div>
@@ -126,9 +132,15 @@ Pilih salah satu metode di atas. E-book dikirim otomatis (QRIS) atau manual (Wha
 <span>📩 Dikirim ke Email / WhatsApp</span>
 </div>
 
-</div>
-
-<footer>© 2026 • muhamad holis</footer>
+<!-- Footer dengan animasi Lottie CDN -->
+<footer>
+  <div class="footer-lottie">
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_tfb3estd.json"  background="transparent"  speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"  background="transparent"  speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_8wREh5.json"  background="transparent"  speed="1" style="width:50px; height:50px;" loop autoplay></lottie-player>
+  </div>
+  <p>© 2026 • E-Book Muhamad Holis</p>
+</footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -162,4 +174,4 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 </body>
-  </html>
+</html>
